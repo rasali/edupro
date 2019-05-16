@@ -9,8 +9,8 @@ class Plugin extends PluginBase
         return [
             'Avirdigital\Edupro\Components\CourseComponent' => 'Course',
             'Avirdigital\Edupro\Components\PartnerComponent' => 'Partner',
-            'Avirdigital\Jobustan\Components\HomeComponent' => 'Home',
-            'Avirdigital\Jobustan\Components\StudentComponent' => 'Student',
+            'Avirdigital\Edupro\Components\HomeComponent' => 'Home',
+            'Avirdigital\Edupro\Components\StudentComponent' => 'Student',
         ];
     }
 

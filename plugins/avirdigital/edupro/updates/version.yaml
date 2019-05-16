@@ -12,3 +12,6 @@
 1.0.5:
     - 'Created table avirdigital_edupro_students'
     - builder_table_create_avirdigital_edupro_students.php
+1.0.6:
+    - 'Created table avirdigital_edupro_abouts'
+    - builder_table_create_avirdigital_edupro_abouts.php

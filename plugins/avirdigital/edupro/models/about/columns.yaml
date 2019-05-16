@@ -1,0 +1,7 @@
+columns:
+    mobile:
+        label: 'avirdigital.edupro::lang.about.mobile'
+        type: text
+    email:
+        label: 'avirdigital.edupro::lang.about.email'
+        type: text

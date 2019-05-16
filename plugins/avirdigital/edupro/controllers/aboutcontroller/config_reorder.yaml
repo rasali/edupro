@@ -1,0 +1,4 @@
+title: AboutController
+modelClass: Avirdigital\Edupro\Models\About
+toolbar:
+    buttons: reorder_toolbar

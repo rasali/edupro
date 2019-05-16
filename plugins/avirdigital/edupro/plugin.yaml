@@ -17,6 +17,9 @@ permissions:
     student:
         tab: 'avirdigital.jobustan::lang.permision.edupro'
         label: 'avirdigital.jobustan::lang.permision.student'
+    about:
+        tab: 'avirdigital.jobustan::lang.permision.edupro'
+        label: 'avirdigital.jobustan::lang.permision.about'
 navigation:
     main-menu-item:
         label: EduPro
@@ -39,3 +42,7 @@ navigation:
                 label: 'avirdigital.edupro::lang.menu.student'
                 url: avirdigital/edupro/studentcontroller
                 icon: icon-users
+            side-menu-item5:
+                label: 'avirdigital.edupro::lang.menu.about'
+                url: avirdigital/edupro/aboutcontroller
+                icon: icon-sitemap

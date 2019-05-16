@@ -14,6 +14,7 @@
         'partner' => 'Partner',
         'career' => 'Career',
         'student' => 'Student',
+        'about' => 'About',
     ],
     'partner' => [
         'logo' => 'Logo',
@@ -24,5 +25,12 @@
     ],
     'student' => [
         'position' => 'Position',
+    ],
+    'about' => [
+        'mobile' => 'Mobile phone',
+        'phone' => 'Home phone',
+        'email' => 'Email',
+        'sec_email' => 'Second email',
+        'address' => 'Address',
     ],
 ];

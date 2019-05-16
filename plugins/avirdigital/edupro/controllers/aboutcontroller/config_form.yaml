@@ -1,0 +1,10 @@
+name: AboutController
+form: $/avirdigital/edupro/models/about/fields.yaml
+modelClass: Avirdigital\Edupro\Models\About
+defaultRedirect: avirdigital/edupro/aboutcontroller
+create:
+    redirect: 'avirdigital/edupro/aboutcontroller/update/:id'
+    redirectClose: avirdigital/edupro/aboutcontroller
+update:
+    redirect: avirdigital/edupro/aboutcontroller
+    redirectClose: avirdigital/edupro/aboutcontroller

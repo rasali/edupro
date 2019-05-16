@@ -1,4 +1,4 @@
 columns:
     name:
         label: 'avirdigital.edupro::lang.partner.name'
-        type: switch
+        type: text

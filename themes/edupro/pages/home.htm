@@ -1,0 +1,140 @@
+title = "Home"
+url = "/index"
+layout = "default"
+is_hidden = 0
+
+[Home]
+==
+<main>
+    <div class="search">
+        <div class="search__container">
+            <div class="search__image">
+                <img src="{{ 'assets/img/search__image.png'|theme }}" alt="search image">
+            </div>
+            <h1 class="search__header">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </h1>
+            <p class="search__paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+            <div class="search__input">
+                <input type="search" placeholder="Kurs axtarın">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="courses">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-3 p-0">
+                    <div class="courses__info u-padding-top-medium u-padding-left-medium u-padding-right-medium u-padding-bottom-small">
+                        <h2 class="courses__info_header">Hazırkı Kurslarımız</h2>
+                        <p class="courses__info_paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                            ad
+                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-9 p-0">
+                    <div class="courses__elements u-padding-top-big u-padding-left-small u-padding-right-small u-padding-bottom-small">
+                        <div class="owl-carousel owl-theme">
+                            {% for rec in courses %}
+                                <div class="item">
+                                    <div class="courses__element courses__element--1 u-padding-top-small u-padding-bottom-small">
+                                        <img class="courses__icon" src="{{ rec.logo.path }}" alt="courses__icon">
+                                        <h6 class="courses__name">{{ rec.name }}</h6>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="preferences u-margin-top-biggest u-margin-bottom-huge">
+        <div class="container">
+            <div class="row">
+                {% for rec in careers %}
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="preference preference--1">
+                            <img src="{{ rec.logo.path }}" alt="preference 1" class="preference__img">
+                            <h4 class="preference__header">{{ rec.title }}</h4>
+                            <p class="preference__paragraph">{{ rec.description }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="commendations">
+        <div class="container-fluid">
+            <div class="row">
+                {% for rec in students %}
+                    <div class="col-12 col-md-6 p-0">
+                        <div class="commendation commendation--1">
+                            <div class="commendation__circle commendation__circle--big commendation__circle--big-1"></div>
+                            <div class="commendation__circle commendation__circle--small commendation__circle--small-1"></div>
+                            <div class="commendation__circle commendation__circle--small commendation__circle--small-1_1"></div>
+
+                            <div class="commendation__paragraph">
+                                {{ rec.description |raw}}
+                            </div>
+                            <h5 class="commendation__author">
+                                <div class="commendation__author--main">{{ rec.name }}</div>
+                                <div class="commendation__authot--sub">{{ rec.position }}</div>
+                            </h5>
+
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="partnerships">
+        <div class="container">
+            <h5 class="partnerships__header">Partnyorlarımız</h5>
+            <div class="partners">
+                <div class="owl-carousel owl-theme">
+                    {% for rec in partners %}
+                        <div class="item">
+                            <div class="partner partner--1">
+                                <img src="{{ rec.logo.path }}" alt="partner1">
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<div class="contact">
+  <div class="contact__phone contact__element contact__element--1">
+    <i class="fas fa-mobile-alt"></i>
+    <span>+994 12 488 88 88</span>
+    <span>+994 50 212 22 97</span>
+  </div>
+  <div class="contact__email contact__element contact__element--2">
+    <i class="fas fa-envelope"></i>
+    <span>info@edupro.az</span>
+    <span>course@edupro.az</span>
+  </div>
+  <div class="contact__location contact__element contact__element--3">
+    <i class="fas fa-location-arrow"></i>
+    <span>Bakı şəhəri, M.Araz küçəsi 50C</span>
+  </div>
+</div>
