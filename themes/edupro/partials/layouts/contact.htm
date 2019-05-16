@@ -1,0 +1,19 @@
+<div class="contact">
+    {% for rec in about %}
+        <div class="contact__phone contact__element contact__element--1">
+            <i class="fas fa-mobile-alt"></i>
+            <span>{{ rec.phone }}</span>
+            <span>{{ rec.mobile }}</span>
+        </div>
+        <div class="contact__email contact__element contact__element--2">
+            <i class="fas fa-envelope"></i>
+            <span>{{ rec.email }}</span>
+            <span>{{ rec.sec_email }}</span>
+        </div>
+        <div class="contact__location contact__element contact__element--3">
+            <i class="fas fa-location-arrow"></i>
+            <span>{{ rec.address }}</span>
+        </div>
+    {% endfor %}
+
+</div>

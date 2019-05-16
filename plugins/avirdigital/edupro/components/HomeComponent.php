@@ -1,5 +1,6 @@
 <?php namespace Avirdigital\Edupro\Components;
 
+use Avirdigital\Edupro\Models\About;
 use Avirdigital\Edupro\Models\Career;
 use Avirdigital\Edupro\Models\Course;
 use Avirdigital\Edupro\Models\Partner;
@@ -27,7 +28,7 @@ class HomeComponent extends ComponentBase
         $this->page['partners'] = $this->listPartner();
         $this->page['careers'] = $this->listCareer();
         $this->page['students'] = $this->listStudent();
-
+        $this->page['about'] = $this->listAbout();
 
     }
 
@@ -62,6 +63,14 @@ class HomeComponent extends ComponentBase
         $model = new Student();
 
         return $model->where('is_active', 1)->orderBy('sort_order', 'DESC')->get()->take(2);
+
+    }
+
+    protected function listAbout()
+    {
+        $model = new About();
+
+        return $model->where('is_active', 1)->get();
 
     }
 }

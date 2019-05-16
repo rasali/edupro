@@ -11,6 +11,7 @@ class Plugin extends PluginBase
             'Avirdigital\Edupro\Components\PartnerComponent' => 'Partner',
             'Avirdigital\Edupro\Components\HomeComponent' => 'Home',
             'Avirdigital\Edupro\Components\StudentComponent' => 'Student',
+            'Avirdigital\Edupro\Components\AboutComponent' => 'About',
         ];
     }
 
