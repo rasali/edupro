@@ -1,0 +1,21 @@
+fields:
+    is_active:
+        label: 'avirdigital.edupro::lang.course.is_active'
+        span: full
+        default: 1
+        type: switch
+    name:
+        label: 'avirdigital.edupro::lang.partner.name'
+        span: auto
+        type: text
+    logo:
+        label: 'avirdigital.edupro::lang.partner.logo'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

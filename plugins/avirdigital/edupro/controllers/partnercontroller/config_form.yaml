@@ -1,0 +1,10 @@
+name: PartnerController
+form: $/avirdigital/edupro/models/partner/fields.yaml
+modelClass: Avirdigital\Edupro\Models\Partner
+defaultRedirect: avirdigital/edupro/partnercontroller
+create:
+    redirect: 'avirdigital/edupro/partnercontroller/update/:id'
+    redirectClose: avirdigital/edupro/partnercontroller
+update:
+    redirect: avirdigital/edupro/partnercontroller
+    redirectClose: avirdigital/edupro/partnercontroller

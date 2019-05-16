@@ -1,0 +1,12 @@
+columns:
+    name:
+        label: 'avirdigital.edupro::lang.course.Name'
+        type: text
+    description:
+        label: 'avirdigital.edupro::lang.course.description'
+        type: text
+    sort_order:
+        label: Sort
+        type: number
+        searchable: false
+        sortable: true

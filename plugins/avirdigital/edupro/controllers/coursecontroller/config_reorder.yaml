@@ -1,0 +1,4 @@
+title: CourseController
+modelClass: Avirdigital\Edupro\Models\Course
+toolbar:
+    buttons: reorder_toolbar

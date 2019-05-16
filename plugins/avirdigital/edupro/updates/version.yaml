@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table avirdigital_edupro_courses'
+    - builder_table_create_avirdigital_edupro_courses.php
+1.0.3:
+    - 'Created table avirdigital_edupro_partners'
+    - builder_table_create_avirdigital_edupro_partners.php
+1.0.4:
+    - 'Created table avirdigital_edupro_careers'
+    - builder_table_create_avirdigital_edupro_careers.php
+1.0.5:
+    - 'Created table avirdigital_edupro_students'
+    - builder_table_create_avirdigital_edupro_students.php

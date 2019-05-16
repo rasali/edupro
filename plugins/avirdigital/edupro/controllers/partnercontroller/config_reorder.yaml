@@ -1,0 +1,4 @@
+title: PartnerController
+modelClass: Avirdigital\Edupro\Models\Partner
+toolbar:
+    buttons: reorder_toolbar

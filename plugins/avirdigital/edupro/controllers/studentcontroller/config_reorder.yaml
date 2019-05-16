@@ -1,0 +1,4 @@
+title: StudentController
+modelClass: Avirdigital\Edupro\Models\Student
+toolbar:
+    buttons: reorder_toolbar

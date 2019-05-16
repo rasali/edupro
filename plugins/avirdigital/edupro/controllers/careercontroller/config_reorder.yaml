@@ -1,0 +1,4 @@
+title: CareerController
+modelClass: Avirdigital\Edupro\Models\Career
+toolbar:
+    buttons: reorder_toolbar

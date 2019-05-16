@@ -1,0 +1,41 @@
+plugin:
+    name: 'avirdigital.edupro::lang.plugin.name'
+    description: 'avirdigital.edupro::lang.plugin.description'
+    author: avirdigital
+    icon: oc-icon-university
+    homepage: ''
+permissions:
+    course:
+        tab: 'avirdigital.jobustan::lang.permision.edupro'
+        label: 'avirdigital.jobustan::lang.permision.course'
+    partner:
+        tab: 'avirdigital.jobustan::lang.permision.edupro'
+        label: 'avirdigital.jobustan::lang.permision.partner'
+    career:
+        tab: 'avirdigital.jobustan::lang.permision.edupro'
+        label: 'avirdigital.jobustan::lang.permision.career'
+    student:
+        tab: 'avirdigital.jobustan::lang.permision.edupro'
+        label: 'avirdigital.jobustan::lang.permision.student'
+navigation:
+    main-menu-item:
+        label: EduPro
+        url: avirdigital/edupro/coursecontroller
+        icon: icon-university
+        sideMenu:
+            side-menu-item:
+                label: 'avirdigital.edupro::lang.menu.course'
+                url: avirdigital/edupro/coursecontroller
+                icon: icon-book
+            side-menu-item2:
+                label: 'avirdigital.edupro::lang.menu.partner'
+                url: avirdigital/edupro/partnercontroller
+                icon: icon-user-plus
+            side-menu-item3:
+                label: 'avirdigital.edupro::lang.menu.career'
+                url: avirdigital/edupro/careercontroller
+                icon: icon-newspaper-o
+            side-menu-item4:
+                label: 'avirdigital.edupro::lang.menu.student'
+                url: avirdigital/edupro/studentcontroller
+                icon: icon-users

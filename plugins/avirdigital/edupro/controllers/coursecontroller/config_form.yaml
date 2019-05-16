@@ -1,0 +1,10 @@
+name: CourseController
+form: $/avirdigital/edupro/models/course/fields.yaml
+modelClass: Avirdigital\Edupro\Models\Course
+defaultRedirect: avirdigital/edupro/coursecontroller
+create:
+    redirect: 'avirdigital/edupro/coursecontroller/update/:id'
+    redirectClose: avirdigital/edupro/coursecontroller
+update:
+    redirect: avirdigital/edupro/coursecontroller
+    redirectClose: avirdigital/edupro/coursecontroller

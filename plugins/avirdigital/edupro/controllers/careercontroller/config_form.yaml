@@ -1,0 +1,10 @@
+name: CareerController
+form: $/avirdigital/edupro/models/career/fields.yaml
+modelClass: Avirdigital\Edupro\Models\Career
+defaultRedirect: avirdigital/edupro/careercontroller
+create:
+    redirect: 'avirdigital/edupro/careercontroller/update/:id'
+    redirectClose: avirdigital/edupro/careercontroller
+update:
+    redirect: avirdigital/edupro/careercontroller
+    redirectClose: avirdigital/edupro/careercontroller

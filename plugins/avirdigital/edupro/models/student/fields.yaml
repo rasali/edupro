@@ -1,0 +1,20 @@
+fields:
+    is_active:
+        label: 'avirdigital.edupro::lang.course.is_active'
+        span: full
+        default: 1
+        type: switch
+    name:
+        label: 'avirdigital.edupro::lang.partner.name'
+        span: auto
+        type: text
+    description:
+        label: 'avirdigital.edupro::lang.course.description'
+        size: ''
+        span: full
+        type: richeditor
+    position:
+        label: 'avirdigital.edupro::lang.student.position'
+        span: auto
+        size: ''
+        type: textarea

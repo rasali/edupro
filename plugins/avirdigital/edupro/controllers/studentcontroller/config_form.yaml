@@ -1,0 +1,10 @@
+name: StudentController
+form: $/avirdigital/edupro/models/student/fields.yaml
+modelClass: Avirdigital\Edupro\Models\Student
+defaultRedirect: avirdigital/edupro/studentcontroller
+create:
+    redirect: 'avirdigital/edupro/studentcontroller/update/:id'
+    redirectClose: avirdigital/edupro/studentcontroller
+update:
+    redirect: avirdigital/edupro/studentcontroller
+    redirectClose: avirdigital/edupro/studentcontroller
