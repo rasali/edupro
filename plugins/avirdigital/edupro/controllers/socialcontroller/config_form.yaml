@@ -1,0 +1,10 @@
+name: SocialController
+form: $/avirdigital/edupro/models/social/fields.yaml
+modelClass: Avirdigital\Edupro\Models\Social
+defaultRedirect: avirdigital/edupro/socialcontroller
+create:
+    redirect: 'avirdigital/edupro/socialcontroller/update/:id'
+    redirectClose: avirdigital/edupro/socialcontroller
+update:
+    redirect: avirdigital/edupro/socialcontroller
+    redirectClose: avirdigital/edupro/socialcontroller

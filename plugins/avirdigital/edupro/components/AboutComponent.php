@@ -1,5 +1,6 @@
 <?php namespace Avirdigital\Edupro\Components;
 
+use Avirdigital\Edupro\Models\About;
 use Cms\Classes\ComponentBase;
 
 class AboutComponent extends ComponentBase
@@ -20,6 +21,7 @@ class AboutComponent extends ComponentBase
     public function onRun()
     {
         $this->page['about'] = $this->listAbout();
+//        dd($this->page['about']);
     }
 
     protected function listAbout()

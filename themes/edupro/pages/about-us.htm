@@ -3,6 +3,8 @@ url = "/about"
 layout = "default"
 is_hidden = 0
 
+[Home]
+
 [About]
 ==
 <main>
@@ -13,10 +15,10 @@ is_hidden = 0
 
         <div class="about__main">
             <div class="container">
+                {% for rec in about %}
                 <div class="about__header">
                     <h2 class="about__header--main">Edu Pro</h2>
-                    <p class="about__header--sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p class="about__header--sub">{{ rec.description }}</p>
                 </div>
 
                 <div class="about__content">
@@ -26,110 +28,32 @@ is_hidden = 0
                                 <img src="{{ 'assets/img/edupro-2.jpg'|theme }}" alt="About main image">
                             </div>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <div class="about__content--text">
-                                <p class="about__paragraph">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-                                    dolor
-                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris
-                                    nisi ut aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris
-                                    nisi
-                                    ut aliquip ex ea commodo consequat.
-                                </p>
-                                <h3 class="about__content_header">Niyə Edu Pro?</h3>
-
-                                <p class="about__paragraph">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-                                    dolor
-                                    sit amet, consectetur
-                                </p>
-
-                                <ul class="about__list">
-                                    <li class="about__list-item">
-                                        <i class="far fa-check-circle"></i> Lorem ipsum dolor sit amet, consectetur
-                                    </li>
-                                    <li class="about__list-item">
-                                        <i class="far fa-check-circle"></i> Lorem ipsum dolor sit amet, consectetur
-                                    </li>
-                                    <li class="about__list-item">
-                                        <i class="far fa-check-circle"></i> Lorem ipsum dolor sit amet, consectetur
-                                    </li>
-                                    <li class="about__list-item">
-                                        <i class="far fa-check-circle"></i> Lorem ipsum dolor sit amet, consectetur
-                                    </li>
-                                    <li class="about__list-item">
-                                        <i class="far fa-check-circle"></i> Lorem ipsum dolor sit amet, consectetur
-                                    </li>
-                                </ul>
+                            <div class="col-12 col-md-6">
+                                {{ rec.content |raw }}
                             </div>
+                        {% endfor %}
 
-                        </div>
                     </div>
                 </div>
 
-                <div class="preferences u-margin-top-big u-margin-bottom-biggest">
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <div class="preference preference--1">
-                                <img src="img/preference1.png" alt="preference 1" class="preference__img">
-                                <h4 class="preference__header">Karyera Mərkəzi</h4>
-                                    <p class="preference__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit,
-                                        sed do
-                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                        veniam,
-                                        quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <div class="preference preference--2">
-                                <img src="img/preference2.png" alt="preference 2" class="preference__img">
-                                <h4 class="preference__header">Zəmanətli Təhsil Sistemi</h4>
-                                    <p class="preference__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit,
-                                        sed do
-                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                        veniam,
-                                        quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <div class="preference preference--3">
-                                <img src="img/preference3.png" alt="preference 3" class="preference__img">
-                                <h4 class="preference__header">Beynəlxalq Sertifikasiya</h4>
-                                    <p class="preference__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit,
-                                        sed do
-                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                        veniam,
-                                        quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <div class="preference preference--4">
-                                <img src="img/preference4.png" alt="preference 4" class="preference__img">
-                                <h4 class="preference__header">Mentor Sistemi</h4>
-                                <p class="preference__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis
-                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="preferences u-margin-top-biggest u-margin-bottom-huge">
+                    <div class="container">
+                        <div class="owl-preferences">
+                            <div class="owl-carousel owl-theme">
+                                {% for rec in careers %}
+                                    <div class="item">
+                                        <div class="preference preference--1">
+                                            <img src="{{ rec.logo.path }}" alt="preference 1" class="preference__img">
+                                            <h4 class="preference__header">{{ rec.title }}</h4>
+                                            <p class="preference__paragraph">{{ rec.description |raw }}</p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </main>

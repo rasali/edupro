@@ -9,10 +9,10 @@ fields:
         span: auto
         type: text
     description:
-        label: 'avirdigital.edupro::lang.course.description'
+        label: 'avirdigital.edupro::lang.plugin.description'
         size: ''
         span: full
-        type: richeditor
+        type: textarea
     logo:
         label: 'avirdigital.edupro::lang.course.logo'
         mode: image

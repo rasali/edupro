@@ -1,0 +1,130 @@
+title = "as"
+url = "/as"
+layout = "default"
+is_hidden = 0
+
+[Home]
+==
+<main>
+    <div class="search">
+        <div class="search__container">
+            <div class="search__image">
+                <img src="{{ 'assets/img/search__image.png'|theme }}" alt="search image">
+            </div>
+            <h1 class="search__header">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </h1>
+            <p class="search__paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+            <div class="search__input">
+                <form action="{{ 'search' | page }}" method="get">
+                    <input name="q" type="text" type="search" placeholder="Kurs axtarın" autocomplete="off">
+                    <i class="fas fa-search"></i>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="courses">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-3 p-0">
+                    <div class="courses__info u-padding-top-medium u-padding-left-medium u-padding-right-medium u-padding-bottom-small">
+                        <h2 class="courses__info_header">Hazırkı Kurslarımız</h2>
+                        <p class="courses__info_paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                            ad
+                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-9 p-0">
+                    <div class="courses__elements u-padding-top-big u-padding-left-small u-padding-right-small u-padding-bottom-small">
+                        <div class="owl-carousel owl-theme" id="coursecar">
+                            {% for rec in courses %}
+                                <div class="item">
+                                    <div class="courses__element courses__element--1 u-padding-top-small u-padding-bottom-small">
+                                        <img class="courses__icon" src="{{ rec.logo.path }}" alt="courses__icon">
+                                        <h6 class="courses__name">{{ rec.name }}</h6>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="preferences u-margin-top-biggest u-margin-bottom-huge">
+        <div class="container">
+            <div class="owl-preferences">
+                <div class="owl-carousel owl-theme">
+                    {% for rec in careers %}
+                        <div class="item">
+                            <div class="preference preference--1">
+                                <img src="{{ rec.logo.path }}" alt="preference 1" class="preference__img">
+                                <h4 class="preference__header">{{ rec.title }}</h4>
+                                    <p class="preference__paragraph">{{ rec.description |raw }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="commendations">
+        <div class="owl-2">
+            <div class="owl-carousel owl-theme">
+                {% for rec in students %}
+                <div class="item">
+                    <div class="commendation">
+                        <div class="commendation__circle">
+                        </div>
+                        <div class="commendation__circle">
+                        </div>
+                        <div class="commendation__circle">
+                        </div>
+
+                        <div class="commendation__paragraph">
+                            {{ rec.description |raw}}
+                        </div>
+                        <h5 class="commendation__author">
+                            <div class="commendation__author--main">{{ rec.name }}</div>
+                            <div class="commendation__authot--sub">{{ rec.position }}</div>
+                        </h5>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="partnerships">
+        <div class="container">
+            <h5 class="partnerships__header">Partnyorlarımız</h5>
+            <div class="partners">
+                <div class="owl-carousel owl-theme">
+                    {% for rec in partners %}
+                    <div class="item">
+                        <div class="partner partner--1">
+                            <img src="{{ rec.logo.path }}" alt="partner1">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>

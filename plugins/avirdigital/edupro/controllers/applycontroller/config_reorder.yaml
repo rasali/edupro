@@ -1,0 +1,4 @@
+title: ApplyController
+modelClass: Avirdigital\Edupro\Models\Apply
+toolbar:
+    buttons: reorder_toolbar

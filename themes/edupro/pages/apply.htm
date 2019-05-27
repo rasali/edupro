@@ -2,6 +2,10 @@ title = "Apply"
 url = "/apply"
 layout = "default"
 is_hidden = 0
+
+[Home]
+
+[Apply]
 ==
 <main>
     <div class="appeal">
@@ -11,36 +15,39 @@ is_hidden = 0
 
         <div class="appeal__main u-margin-top-biggest">
             <div class="container">
-                <form action="#">
+                <form data-request="onApply" data-request-validate
+                      data-request-flash>
                     <div class="appeal__form">
                         <div class="row">
                             <div class="col-12 col-md-3">
-                                <input type="text" class="appeal__name" placeholder="Adınız">
+                                <input name="name" type="text" class="appeal__name" placeholder="Adınız">
+                                <span class="text-danger" data-validate-for="name"></span>
                             </div>
                             <div class="col-12 col-md-3">
-                                <input type="text" class="appeal__surname" placeholder="Soyadınız">
+                                <input name="surname" type="text" class="appeal__surname" placeholder="Soyadınız">
+                                <span class="text-danger" data-validate-for="surname"></span>
                             </div>
                             <div class="col-12 col-md-3">
                                 <input type="text" class="appeal__phone" placeholder="Əlaqə nömrəniz">
                             </div>
                             <div class="col-12 col-md-3">
-                                <input type="email" class="appeal__email" placeholder="E-poçt adresiniz" required>
+                                <input name="email" type="email" class="appeal__email" placeholder="E-poçt adresiniz" required>
+                                <span class="text-danger" data-validate-for="email"></span>
                             </div>
                             <div class="col-12 col-md-6 mt-2">
                                 <div class="appeal__select mb-3">
-                                    <select class="js-example-placeholder-single js-states form-control">
+                                    <select name="position" class="js-example-placeholder-single js-states form-control">
                                         <option></option>
-                                        <option value="hacker">Hacker</option>
-                                        <option value="gamer">Gamer</option>
-                                        <option value="developer">Developer</option>
-                                        <option value="programmer">Programmer</option>
-                                        <option value="designer">Designer</option>
+                                        {% for rec in position %}
+                                            <option value="hacker">{{ rec.name }}</option>
+                                        {% endfor %}
                                     </select>
+                                    <span class="text-danger" data-validate-for="position"></span>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 mt-2">
                                 <i class="icofont-circled-up"></i>
-                                <button class="appeal__btn" href="#">Qeydiyyatı tamamla</button>
+                                <button type="submit" class="appeal__btn">Qeydiyyatı tamamla</button>
                             </div>
                         </div>
                     </div>
@@ -48,54 +55,14 @@ is_hidden = 0
                 <div class="courses__elements  u-padding-bottom-medium">
                     <h3 class="appeal__header u-margin-top-biggest">Tədris Proqramlarımız</h3>
                     <div class="row">
-                        <div class="col-12 col-md-3 mb-4">
-                            <div class="courses__element courses__element--1">
-                                <img class="courses__icon" src="img/Asset 6.svg" alt="courses__icon">
-                                <h6 class="courses__name">Digital Marketing</h4>
+                        {% for rec in courses %}
+                            <div class="col-12 col-md-3 mb-4">
+                                <div class="courses__element courses__element--1">
+                                    <img class="courses__icon" src="{{ rec.logo.path }}" alt="courses__icon">
+                                    <h6 class="courses__name">{{ rec.name }}</h6>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-md-3 mb-4">
-                            <div class="courses__element courses__element--2">
-                                <img class="courses__icon" src="img/Asset 3.svg" alt="courses__icon">
-                                <h6 class="courses__name">Qrafik və Dizayn</h4>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 mb-4">
-                            <div class="courses__element courses__element--3">
-                                <img class="courses__icon" src="img/Asset 23.svg" alt="courses__icon">
-                                <h6 class="courses__name">Proqramlaşdırma</h4>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 mb-4">
-                            <div class="courses__element courses__element--4">
-                                <img class="courses__icon" src="img/Asset 18.svg" alt="courses__icon">
-                                <h6 class="courses__name">3D Modelləşdirmə və Vizualizasiya</h6>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 mb-4">
-                            <div class="courses__element courses__element--5">
-                                <img class="courses__icon" src="img/Asset 6.svg" alt="courses__icon">
-                                <h6 class="courses__name">Sistem Administratorluğu</h4>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 mb-4">
-                            <div class="courses__element courses__element--6">
-                                <img class="courses__icon" src="img/Asset 3.svg" alt="courses__icon">
-                                <h6 class="courses__name">SMM Sosial Media Marketinqi</h4>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 mb-4">
-                            <div class="courses__element courses__element--7">
-                                <img class="courses__icon" src="img/Asset 23.svg" alt="courses__icon">
-                                <h6 class="courses__name">İnformasiya Texnologiyaları</h4>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 mb-4">
-                            <div class="courses__element courses__element--8">
-                                <img class="courses__icon" src="img/Asset 18.svg" alt="courses__icon">
-                                <h6 class="courses__name">MS Office</h6>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

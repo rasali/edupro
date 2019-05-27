@@ -1,0 +1,10 @@
+name: ApplyPositionController
+form: $/avirdigital/edupro/models/applyposition/fields.yaml
+modelClass: Avirdigital\Edupro\Models\ApplyPosition
+defaultRedirect: avirdigital/edupro/applypositioncontroller
+create:
+    redirect: 'avirdigital/edupro/applypositioncontroller/update/:id'
+    redirectClose: avirdigital/edupro/applypositioncontroller
+update:
+    redirect: avirdigital/edupro/applypositioncontroller
+    redirectClose: avirdigital/edupro/applypositioncontroller

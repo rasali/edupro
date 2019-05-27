@@ -1,0 +1,22 @@
+.form
+{
+    background-color: #D0D9DD;
+    height: auto;
+    padding: 20px;
+}
+.form h5
+{
+    color: black;
+    font-weight: bolder;
+    font-style: italic;
+    text-decoration-line: underline;
+}
+
+p
+{
+    font-weight: bolder;
+    font-style: normal;
+    border: white 2px inset;
+    padding: 10px;
+    color: 	black;
+}

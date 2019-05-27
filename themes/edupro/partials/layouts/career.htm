@@ -1,0 +1,19 @@
+[viewBag]
+
+[Home]
+==
+<div class="preferences u-margin-top-biggest u-margin-bottom-huge">
+    <div class="container">
+        <div class="row">
+            {% for rec in careers %}
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="preference preference--1">
+                        <img src="{{ rec.logo.path }}" alt="preference 1" class="preference__img">
+                        <h4 class="preference__header">{{ rec.title }}</h4>
+                        <p class="preference__paragraph">{{ rec.description |raw }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

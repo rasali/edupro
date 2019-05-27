@@ -1,0 +1,4 @@
+title: SocialController
+modelClass: Avirdigital\Edupro\Models\Social
+toolbar:
+    buttons: reorder_toolbar

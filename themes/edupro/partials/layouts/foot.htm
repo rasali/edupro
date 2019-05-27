@@ -8,15 +8,14 @@
 <script src="{{ 'assets/libs/select2/dist/js/select2.min.js'|theme }}" type="text/javascript" charset="utf-8" async defer></script>
 
 
-<script src="js/all.min.js"></script>
+<script src="{{ 'assets/js/all.min.js'|theme }}"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="{{ 'assets/libs/owl.carousel/dist/owl.carousel.js'|theme }}"></script>
 
 <script type="text/javascript">
-    $('.owl-carousel').owlCarousel({
+    $('#coursecar').owlCarousel({
         loop:true,
         margin:10,
-        nav:true,
         responsive:{
 
         }
@@ -27,6 +26,49 @@
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
 </script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+{#<script src="https://www.google-analytics.com/analytics.js" async defer></script>#}
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl_tIRv0tzVyO6Bd0mvC9EzqxQlUDDOtU&callback=initMap" async
         defer></script>
+
+{% framework extras %} 
+{% scripts %}
+
+<script>
+    /*
+     * Implement nice invalid form fields
+     */
+    $(window).on('ajaxInvalidField', function (event, fieldElement, fieldName, errorMsg, isFirst) {
+        var $field = $(fieldElement).closest('.form-group'),
+            $help = $('<p />').addClass('help-block');
+        if (!$field.length) {
+            return;
+        }
+        event.preventDefault();
+        if (errorMsg) {
+            $help.text(errorMsg.join(', '));
+        }
+        $help.addClass('form-field-error-label');
+        $field.addClass('has-error');
+        // Prevent the next error alert only once
+        $(window).one('ajaxErrorMessage', function (event) {
+            event.preventDefault();
+        });
+        if ($('.form-field-error-label', $field).length > 0)
+            return;
+        $field.append($help);
+        // Scroll to the form group
+        if (isFirst) {
+            $('html, body').animate({scrollTop: $field.offset().top - 100}, 500, function () {
+                fieldElement.focus();
+            });
+        }
+    });
+    $(document).on('ajaxPromise', '[data-request]', function () {
+        var $form = $(this).closest('form'),
+            $help = $('.form-field-error-label', $form);
+        if (!$form.length || !$help.length)
+            return;
+        $help.remove();
+        $('.form-group.has-error', $form).removeClass('has-error');
+    });
+</script>

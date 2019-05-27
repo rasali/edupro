@@ -1,0 +1,10 @@
+fields:
+    name:
+        label: 'avirdigital.edupro::lang.course.Name'
+        span: auto
+        type: text
+    is_active:
+        label: 'avirdigital.edupro::lang.course.is_active'
+        span: auto
+        default: 1
+        type: switch

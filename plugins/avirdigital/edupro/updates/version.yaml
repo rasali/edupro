@@ -15,3 +15,39 @@
 1.0.6:
     - 'Created table avirdigital_edupro_abouts'
     - builder_table_create_avirdigital_edupro_abouts.php
+1.0.7:
+    - 'Created table avirdigital_edupro_contacts'
+    - builder_table_create_avirdigital_edupro_contacts.php
+1.0.8:
+    - 'Created table avirdigital_edupro_applies'
+    - builder_table_create_avirdigital_edupro_applies.php
+1.0.9:
+    - 'Created table avirdigital_edupro_apply_positions'
+    - builder_table_create_avirdigital_edupro_apply_positions.php
+1.0.10:
+    - 'Updated table avirdigital_edupro_apply_positions'
+    - builder_table_update_avirdigital_edupro_apply_positions.php
+1.0.11:
+    - 'Updated table avirdigital_edupro_apply_positions'
+    - builder_table_update_avirdigital_edupro_apply_positions_2.php
+1.0.12:
+    - 'Updated table avirdigital_edupro_courses'
+    - builder_table_update_avirdigital_edupro_courses.php
+1.0.13:
+    - 'Updated table avirdigital_edupro_courses'
+    - builder_table_update_avirdigital_edupro_courses_2.php
+1.0.14:
+    - 'Updated table avirdigital_edupro_courses'
+    - builder_table_update_avirdigital_edupro_courses_3.php
+1.0.15:
+    - 'Updated table avirdigital_edupro_courses'
+    - builder_table_update_avirdigital_edupro_courses_4.php
+1.0.16:
+    - 'Created table avirdigital_edupro_socials'
+    - builder_table_create_avirdigital_edupro_socials.php
+1.0.17:
+    - 'Updated table avirdigital_edupro_socials'
+    - builder_table_update_avirdigital_edupro_socials.php
+1.0.18:
+    - 'Updated table avirdigital_edupro_abouts'
+    - builder_table_update_avirdigital_edupro_abouts.php

@@ -2,9 +2,10 @@ columns:
     name:
         label: 'avirdigital.edupro::lang.course.Name'
         type: text
-    description:
-        label: 'avirdigital.edupro::lang.course.description'
-        type: text
+    logo:
+        label: 'avirdigital.edupro::lang.course.logo'
+        type: partial
+        path: ~/plugins/avirdigital/edupro/models/course/_image_column.htm
     sort_order:
         label: Sort
         type: number

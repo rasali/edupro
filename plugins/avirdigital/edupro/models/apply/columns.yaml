@@ -1,0 +1,7 @@
+columns:
+    name:
+        label: Name
+        type: text
+    position:
+        label: 'avirdigital.edupro::lang.student.position'
+        type: text

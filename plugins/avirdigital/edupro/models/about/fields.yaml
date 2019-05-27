@@ -25,3 +25,8 @@ fields:
         span: full
         size: ''
         type: textarea
+    content:
+        label: 'avirdigital.edupro::lang.about.content'
+        span: full
+        size: ''
+        type: richeditor

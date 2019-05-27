@@ -1,0 +1,7 @@
+columns:
+    full_name:
+        label: Name
+        type: text
+    message:
+        label: Message
+        type: text

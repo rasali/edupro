@@ -4,6 +4,7 @@ use Avirdigital\Edupro\Models\About;
 use Avirdigital\Edupro\Models\Career;
 use Avirdigital\Edupro\Models\Course;
 use Avirdigital\Edupro\Models\Partner;
+use Avirdigital\Edupro\Models\Social;
 use Avirdigital\Edupro\Models\Student;
 use Cms\Classes\ComponentBase;
 
@@ -28,7 +29,9 @@ class HomeComponent extends ComponentBase
         $this->page['partners'] = $this->listPartner();
         $this->page['careers'] = $this->listCareer();
         $this->page['students'] = $this->listStudent();
-        $this->page['about'] = $this->listAbout();
+//        $this->page['about'] = $this->listAbout();
+        $this->page['social'] = $this->listSocial();
+//        dd($this->page['social']);
 
     }
 
@@ -37,7 +40,6 @@ class HomeComponent extends ComponentBase
         $model = new Course();
 
         return $model->where('is_active', 1)->get();
-
 
 
     }
@@ -66,9 +68,17 @@ class HomeComponent extends ComponentBase
 
     }
 
-    protected function listAbout()
+//    protected function listAbout()
+//    {
+//        $model = new About();
+//
+//        return $model->where('is_active', 1)->get();
+//
+//    }
+
+    protected function listSocial()
     {
-        $model = new About();
+        $model = new Social();
 
         return $model->where('is_active', 1)->get();
 

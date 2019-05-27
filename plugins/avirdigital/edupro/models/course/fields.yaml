@@ -13,6 +13,22 @@ fields:
         size: ''
         span: full
         type: richeditor
+    hours:
+        label: ÜMUMI
+        span: auto
+        type: text
+    afternoon:
+        label: 'HƏFTƏ IÇI GÜNDÜZ'
+        span: auto
+        type: text
+    evening:
+        label: 'HƏFTƏ IÇI AXŞAM'
+        span: auto
+        type: text
+    weekend:
+        label: 'HƏFTƏ SONU'
+        span: auto
+        type: text
     logo:
         label: 'avirdigital.edupro::lang.course.logo'
         span: auto
@@ -23,4 +39,13 @@ fields:
             extension: auto
         imageWidth: '100'
         imageHeight: '100'
+        type: fileupload
+    file:
+        label: File
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
         type: fileupload

@@ -35,5 +35,6 @@ class Course extends Model
 
     public $attachOne = [
         'logo' => 'System\Models\File',
+        'file' => 'System\Models\File',
     ];
 }

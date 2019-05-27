@@ -1,0 +1,10 @@
+name: ApplyController
+form: $/avirdigital/edupro/models/apply/fields.yaml
+modelClass: Avirdigital\Edupro\Models\Apply
+defaultRedirect: avirdigital/edupro/applycontroller
+create:
+    redirect: 'avirdigital/edupro/applycontroller/update/:id'
+    redirectClose: avirdigital/edupro/applycontroller
+update:
+    redirect: avirdigital/edupro/applycontroller
+    redirectClose: avirdigital/edupro/applycontroller

@@ -1,0 +1,12 @@
+list: $/avirdigital/edupro/models/applyposition/columns.yaml
+modelClass: Avirdigital\Edupro\Models\ApplyPosition
+title: ApplyPositionController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'avirdigital/edupro/applypositioncontroller/update/:id'

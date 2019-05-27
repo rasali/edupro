@@ -1,9 +1,11 @@
 title = "Home"
-url = "/index"
+url = "/"
 layout = "default"
 is_hidden = 0
 
 [Home]
+
+[siteSearchInclude]
 ==
 <main>
     <div class="search">
@@ -18,8 +20,11 @@ is_hidden = 0
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </p>
             <div class="search__input">
-                <input type="search" placeholder="Kurs axtarın">
-                <i class="fas fa-search"></i>
+                <form action="{{ 'search' | page }}" method="get">
+                    <input name="q" type="text" type="search" placeholder="Kurs axtarın" autocomplete="off">
+                    <i class="fas fa-search"></i>
+                </form>
+
             </div>
         </div>
 
@@ -44,7 +49,7 @@ is_hidden = 0
                 </div>
                 <div class="col-12 col-md-9 p-0">
                     <div class="courses__elements u-padding-top-big u-padding-left-small u-padding-right-small u-padding-bottom-small">
-                        <div class="owl-carousel owl-theme">
+                        <div class="owl-carousel owl-theme" id="coursecar">
                             {% for rec in courses %}
                                 <div class="item">
                                     <div class="courses__element courses__element--1 u-padding-top-small u-padding-bottom-small">
@@ -63,29 +68,34 @@ is_hidden = 0
 
     <div class="preferences u-margin-top-biggest u-margin-bottom-huge">
         <div class="container">
-            <div class="row">
-                {% for rec in careers %}
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="preference preference--1">
-                            <img src="{{ rec.logo.path }}" alt="preference 1" class="preference__img">
-                            <h4 class="preference__header">{{ rec.title }}</h4>
-                            <p class="preference__paragraph">{{ rec.description }}</p>
+            <div class="owl-preferences">
+                <div class="owl-carousel owl-theme">
+                    {% for rec in careers %}
+                        <div class="item">
+                            <div class="preference preference--1">
+                                <img src="{{ rec.logo.path }}" alt="preference 1" class="preference__img">
+                                <h4 class="preference__header">{{ rec.title }}</h4>
+                                <p class="preference__paragraph">{{ rec.description |raw }}</p>
+                            </div>
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
 
     <div class="commendations">
-        <div class="container-fluid">
-            <div class="row">
+        <div class="owl-2">
+            <div class="owl-carousel owl-theme">
                 {% for rec in students %}
-                    <div class="col-12 col-md-6 p-0">
-                        <div class="commendation commendation--1">
-                            <div class="commendation__circle commendation__circle--big commendation__circle--big-1"></div>
-                            <div class="commendation__circle commendation__circle--small commendation__circle--small-1"></div>
-                            <div class="commendation__circle commendation__circle--small commendation__circle--small-1_1"></div>
+                    <div class="item">
+                        <div class="commendation">
+                            <div class="commendation__circle">
+                            </div>
+                            <div class="commendation__circle">
+                            </div>
+                            <div class="commendation__circle">
+                            </div>
 
                             <div class="commendation__paragraph">
                                 {{ rec.description |raw}}
@@ -100,7 +110,6 @@ is_hidden = 0
                 {% endfor %}
             </div>
         </div>
-
     </div>
 
     <div class="partnerships">

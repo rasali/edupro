@@ -1,3 +1,7 @@
+[Home]
+
+[viewBag]
+==
 <footer class="footer">
     <div class="container">
         <div class="footer__content">
@@ -15,9 +19,9 @@
                     <div class="footer__transitions">
                         <h5 class="footer__header footer__transitions--header">Keçidlər</h5>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="#" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> Haqqımızda</a></li>
-                            <li class="footer__list-item"><a href="#" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> Kurslar</a></li>
-                            <li class="footer__list-item"><a href="#" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> Bizimlə Əlaqə</a>
+                            <li class="footer__list-item"><a href="{{ 'about-us'|page }}" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> Haqqımızda</a></li>
+                            <li class="footer__list-item"><a href="{{ 'course'|page }}" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> Kurslar</a></li>
+                            <li class="footer__list-item"><a href="{{ 'contact'|page }}" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> Bizimlə Əlaqə</a>
                             </li>
                         </ul>
                     </div>
@@ -26,14 +30,9 @@
                     <div class="footer__courses">
                         <h5 class="footer__header footer__courses--header">Kurslar</h5>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="#" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> Digital
-                                    Marketinq</a></li>
-                            <li class="footer__list-item"><a href="#" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> Qrafik və Veb
-                                    Dizayn</a></li>
-                            <li class="footer__list-item"><a href="#" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> Proqramlaşdırma</a>
-                            </li>
-                            <li class="footer__list-item"><a href="#" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> 3D Modelləşdirmə və
-                                    Vizualizasiya</a></li>
+                            {% for rec in courses %}
+                                <li class="footer__list-item"><a href="{{ 'course-detail'|page({ slug:rec.slug  }) }}" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i>{{ rec.name }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
@@ -41,9 +40,9 @@
                     <div class="footer__follow">
                         <h5 class="footer__header footer__follow--header">Bizi İzləyin</h5>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="#" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> Facebook</a></li>
-                            <li class="footer__list-item"><a href="#" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> İnstagram</a></li>
-                            <li class="footer__list-item"><a href="#" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i> Twitter</a></li>
+                            {% for rec in social %}
+                                <li class="footer__list-item"><a target="_blank" href="{{ rec.link }}" class="footer__list-text"><i class="fas fa-chevron-right footer__list-icon"></i>{{ rec.name }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>

@@ -1,0 +1,10 @@
+name: ContactController
+form: $/avirdigital/edupro/models/contact/fields.yaml
+modelClass: Avirdigital\Edupro\Models\Contact
+defaultRedirect: avirdigital/edupro/contactcontroller
+create:
+    redirect: 'avirdigital/edupro/contactcontroller/update/:id'
+    redirectClose: avirdigital/edupro/contactcontroller
+update:
+    redirect: avirdigital/edupro/contactcontroller
+    redirectClose: avirdigital/edupro/contactcontroller

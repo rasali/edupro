@@ -20,6 +20,15 @@ permissions:
     about:
         tab: 'avirdigital.jobustan::lang.permision.edupro'
         label: 'avirdigital.jobustan::lang.permision.about'
+    contact:
+        tab: 'avirdigital.jobustan::lang.permision.edupro'
+        label: 'avirdigital.jobustan::lang.permision.contact'
+    apply:
+        tab: 'avirdigital.jobustan::lang.permision.edupro'
+        label: 'avirdigital.jobustan::lang.permision.apply'
+    social:
+        tab: 'avirdigital.jobustan::lang.permision.edupro'
+        label: 'avirdigital.jobustan::lang.permision.social'
 navigation:
     main-menu-item:
         label: EduPro
@@ -45,4 +54,20 @@ navigation:
             side-menu-item5:
                 label: 'avirdigital.edupro::lang.menu.about'
                 url: avirdigital/edupro/aboutcontroller
-                icon: icon-sitemap
+                icon: icon-street-view
+            side-menu-item6:
+                label: 'avirdigital.edupro::lang.menu.contact'
+                url: avirdigital/edupro/contactcontroller
+                icon: icon-connectdevelop
+            side-menu-item7:
+                label: 'avirdigital.edupro::lang.menu.apply'
+                url: avirdigital/edupro/applycontroller
+                icon: icon-arrow-right
+            side-menu-item8:
+                label: ApplyPosition
+                url: avirdigital/edupro/applypositioncontroller
+                icon: icon-adjust
+            side-menu-item9:
+                label: 'avirdigital.edupro::lang.menu.social'
+                url: avirdigital/edupro/socialcontroller
+                icon: icon-whatsapp

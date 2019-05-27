@@ -1,0 +1,4 @@
+title: ApplyPositionController
+modelClass: Avirdigital\Edupro\Models\ApplyPosition
+toolbar:
+    buttons: reorder_toolbar

@@ -2,3 +2,10 @@ columns:
     name:
         label: 'avirdigital.edupro::lang.partner.name'
         type: text
+    logo:
+        label: 'avirdigital.edupro::lang.partner.logo'
+        type: partial
+        path: ~/plugins/avirdigital/edupro/models/partner/_image_column.htm
+        sort_order:
+            label: Sort
+            type: number

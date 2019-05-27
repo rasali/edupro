@@ -1,0 +1,33 @@
+description = "Static page layout"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[About]
+==
+<!doctype html>
+<html class="no-js" lang="">
+
+{% partial "layouts/head" %}
+
+<body>
+
+{% partial "layouts/header" %}
+
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+{% page %}
+
+{% partial "layouts/career" %}
+
+{% partial "layouts/about" %}
+
+{% partial "layouts/footer" %}
+
+{% partial "layouts/foot" %}
+</body>
+
+</html>

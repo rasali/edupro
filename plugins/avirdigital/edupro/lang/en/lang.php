@@ -15,6 +15,9 @@
         'career' => 'Career',
         'student' => 'Student',
         'about' => 'About',
+        'contact' => 'Contact',
+        'apply' => 'Apply',
+        'social' => 'Social',
     ],
     'partner' => [
         'logo' => 'Logo',
@@ -32,5 +35,6 @@
         'email' => 'Email',
         'sec_email' => 'Second email',
         'address' => 'Address',
+        'content' => 'Content',
     ],
 ];
