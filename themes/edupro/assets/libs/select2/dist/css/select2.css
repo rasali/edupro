@@ -72,7 +72,9 @@
   -webkit-user-select: none; }
   .select2-results__option[aria-selected] {
     cursor: pointer; }
-
+.select2-results__option ul li{
+    font-size:15px;
+}
 .select2-container--open .select2-dropdown {
   left: 0; }
 

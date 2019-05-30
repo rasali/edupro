@@ -120,10 +120,12 @@ body {
           box-sizing: border-box; }
 
 ul {
+    font-size: 2rem;
   padding: 0;
   margin: 0; }
   ul li {
-    list-style-type: none; }
+    list-style-type: none;
+      font-size: 1.5rem;}
 
 a, a:link, a:active, a:hover {
   text-decoration: none; }
@@ -1333,6 +1335,7 @@ textarea {
         margin-top: 3rem; } }
 
 .select2.select2-container.select2-container--default {
+    font-size: 1.5rem;
   width: 100% !important; }
 
 .select2-selection__rendered {
@@ -1436,7 +1439,8 @@ textarea {
       .footer__list-item {
         margin-bottom: .8rem; } }
   .footer__list-text {
-    font-family: DINRoundPro-Medium, Helvetica, Arial, sans-serif;
+      text-transform: capitalize;
+      font-family: DINRoundPro-Medium, Helvetica, Arial, sans-serif;
     color: #999999;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;

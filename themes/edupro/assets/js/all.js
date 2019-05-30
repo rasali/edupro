@@ -107,16 +107,8 @@ $(document).ready(function () {
         .siblings(":nth-child(3)").addClass("commendation__circle--big commendation__circle--big-2");;
 });
 
-var map;
-function initMap() {
-    map = new google.maps.Map(document.getElementById('googleMap'), {
-        center: {
-            lat: -34.397,
-            lng: 150.644
-        },
-        zoom: 8
-    });
-}
+
+
 $(document).ready(function () {
     $('.menu-toggle').click(function () {
         $('nav').toggleClass('active')
