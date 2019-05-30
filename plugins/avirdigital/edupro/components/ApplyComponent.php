@@ -54,6 +54,15 @@ class ApplyComponent extends ComponentBase
 
         } else {
             $apply = Apply::create($validateData);
+
+            $a = Mail::send('avirdigital.edupro::mail.message', $validateData, function ($message) {
+
+                $message->to('rasul.aliyev94@gmail.com', 'Admin Person');
+                $message->subject('You have a new message');
+
+            });
+            dd($a);
+
         }
     }
 }

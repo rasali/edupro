@@ -56,7 +56,7 @@ class HomeComponent extends ComponentBase
     {
         $model = new Career();
 
-        return $model->where('is_active', 1)->orderBy('sort_order', 'ASC')->get()->take(4);
+        return $model->where('is_active', 1)->orderBy('sort_order', 'ASC')->get();
 
     }
 
@@ -64,7 +64,7 @@ class HomeComponent extends ComponentBase
     {
         $model = new Student();
 
-        return $model->where('is_active', 1)->orderBy('sort_order', 'DESC')->get()->take(2);
+        return $model->where('is_active', 1)->orderBy('sort_order', 'DESC')->get();
 
     }
 

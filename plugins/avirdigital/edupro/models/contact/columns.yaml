@@ -2,6 +2,6 @@ columns:
     full_name:
         label: Name
         type: text
-    message:
+    content:
         label: Message
         type: text

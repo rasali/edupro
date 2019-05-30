@@ -38,12 +38,7 @@ is_hidden = 0
                         <h2 class="courses__info_header">Hazırkı Kurslarımız</h2>
                         <p class="courses__info_paragraph">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.
+                            labore et dolore magna aliqua. 
                         </p>
                     </div>
                 </div>
@@ -54,7 +49,7 @@ is_hidden = 0
                                 <div class="item">
                                     <div class="courses__element courses__element--1 u-padding-top-small u-padding-bottom-small">
                                         <img class="courses__icon" src="{{ rec.logo.path }}" alt="courses__icon">
-                                        <h6 class="courses__name">{{ rec.name }}</h6>
+                                        <h6 class="courses__name"><a href="{{ 'course-detail'|page({ slug:rec.slug  }) }}">{{ rec.name }}</a></h6>
                                     </div>
                                 </div>
                             {% endfor %}
@@ -75,7 +70,7 @@ is_hidden = 0
                             <div class="preference preference--1">
                                 <img src="{{ rec.logo.path }}" alt="preference 1" class="preference__img">
                                 <h4 class="preference__header">{{ rec.title }}</h4>
-                                <p class="preference__paragraph">{{ rec.description |raw }}</p>
+                                <p class="preference__paragraph">{{ rec.description | raw }}</p>
                             </div>
                         </div>
                     {% endfor %}

@@ -33,12 +33,15 @@ is_hidden = 0
                                 <div class="col-12 col-md-3">
                                     <input name="phone" type="text" class="appeal__phone" placeholder="Əlaqə nömrəniz">
                                 </div>
-                                <div class="col-12 col-md-3">
+                                <div class="d-none d-sm-block col-md-3">
                                     <button type="submit" class="appeal__btn">Göndər</button>
                                 </div>
                                 <div class="col-12 mt-4">
-                                    <textarea name="message" rows="6" placeholder="Mesajınızı yazın..."></textarea>
-                                    <span class="text-danger" data-validate-for="message"></span>
+                                    <textarea name="content" rows="6" placeholder="Mesajınızı yazın..."></textarea>
+                                    <span class="text-danger" data-validate-for="content"></span>
+                                    <div class="d-block d-sm-none col-12">
+                                        <button type="submit" class="appeal__btn">Göndər</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -49,3 +52,32 @@ is_hidden = 0
 
     </div>
 </main>
+
+{% put scripts %}
+    <script>
+        if (status == google.maps.GeocoderStatus.OK) {
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker;
+            document.getElementById('lat').value = results[0].geometry.location.lat();
+            document.getElementById('lng').value = results[0].geometry.location.lng();
+
+
+            // add this
+            var latt=results[0].geometry.location.lat();
+            var lngg=results[0].geometry.location.lng();
+            $.ajax({
+                url: "your-php-code-url-to-save-in-database",
+                dataType: 'json',
+                type: 'POST',
+                data:{ lat: lat, lng: lngg }
+                success: function(data)
+                {
+                    //check here whether inserted or not
+                }
+            });
+
+
+        }
+    </script>
+{% endput %}
+

@@ -2,4 +2,5 @@ name: Edupro
 description: 'Edupro''s website'
 author: Avirdigital
 homepage: ''
+form: theme_fields.yaml
 code: avirdigital-edupro

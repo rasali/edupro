@@ -2,7 +2,7 @@
 
 use Avirdigital\Edupro\Models\Contact;
 use Cms\Classes\ComponentBase;
-use Illuminate\Support\Facades\Mail;
+use Mail;
 use Validator;
 use ValidationException;
 
@@ -35,7 +35,7 @@ class ContactComponent extends ComponentBase
         $rules = [
             'full_name' => 'required',
             'email' => 'required|email',
-            'message' => 'required',
+            'content' => 'required',
         ];
 
         $validation = Validator::make($validateData, $rules);
@@ -44,15 +44,20 @@ class ContactComponent extends ComponentBase
             throw new ValidationException($validation);
 
         } else {
+
             $contact = Contact::create($validateData);
+
+            $a = Mail::send('avirdigital.edupro::mail.message', $validateData, function ($message) {
+
+                $message->to('rasul.aliyev94@gmail.com', 'Admin Person');
+                $message->subject('You have a new message');
+
+            });
+            dd($a);
+
+
         }
 
-                Mail::send('avirdigital.edupro::mail.message', $validateData, function ($message) {
-
-            $message->to('admin@domain.tld', 'Admin Person');
-            $message->subject('You have a new message');
-
-        });
 
     }
 }

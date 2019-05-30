@@ -39,7 +39,7 @@ is_hidden = 0
                                     <select name="position" class="js-example-placeholder-single js-states form-control">
                                         <option></option>
                                         {% for rec in position %}
-                                            <option value="hacker">{{ rec.name }}</option>
+                                            <option value="{{ rec.name }}">{{ rec.name }}</option>
                                         {% endfor %}
                                     </select>
                                     <span class="text-danger" data-validate-for="position"></span>

@@ -8,6 +8,7 @@
         'description' => 'Description',
         'is_active' => 'Status',
         'logo' => 'Logo',
+        'about' => 'About',
     ],
     'menu' => [
         'course' => 'Course',

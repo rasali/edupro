@@ -2,10 +2,14 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="{{ 'assets/libs/bootstrap/dist/js/bootstrap.min.js'|theme }}" type="text/javascript" charset="utf-8" async defer></script>
-<script src="{{ 'assets/libs/owl.carousel/dist/owl.carousel.min.js'|theme }}" type="text/javascript" charset="utf-8" async defer></script>
-<script src="{{ 'assets/libs/select2/dist/js/select2.min.js'|theme }}" type="text/javascript" charset="utf-8" async defer></script>
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="{{ 'assets/libs/bootstrap/dist/js/bootstrap.min.js'|theme }}" type="text/javascript" charset="utf-8" async
+        defer></script>
+<script src="{{ 'assets/libs/owl.carousel/dist/owl.carousel.min.js'|theme }}" type="text/javascript" charset="utf-8"
+        async defer></script>
+<script src="{{ 'assets/libs/select2/dist/js/select2.min.js'|theme }}" type="text/javascript" charset="utf-8" async
+        defer></script>
 
 
 <script src="{{ 'assets/js/all.min.js'|theme }}"></script>
@@ -14,17 +18,29 @@
 
 <script type="text/javascript">
     $('#coursecar').owlCarousel({
-        loop:true,
-        margin:10,
-        responsive:{
-
+        loop: true,
+        margin: 10,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
+            },
+            600: {
+                items: 4,
+                nav: false
+            },
         }
     });
 </script>
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    window.ga = function () {
+        ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
 </script>
 {#<script src="https://www.google-analytics.com/analytics.js" async defer></script>#}
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl_tIRv0tzVyO6Bd0mvC9EzqxQlUDDOtU&callback=initMap" async

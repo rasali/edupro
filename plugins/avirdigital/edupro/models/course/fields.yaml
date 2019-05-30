@@ -49,3 +49,8 @@ fields:
             extension: auto
         span: auto
         type: fileupload
+    about:
+        label: 'avirdigital.edupro::lang.course.about'
+        span: full
+        size: ''
+        type: richeditor
