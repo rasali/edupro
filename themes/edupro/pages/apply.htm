@@ -54,15 +54,17 @@ is_hidden = 0
                 </form>
                 <div class="courses__elements  u-padding-bottom-medium">
                     <h3 class="appeal__header u-margin-top-biggest">Tədris Proqramlarımız</h3>
-                    <div class="row">
-                        {% for rec in courses %}
-                            <div class="col-12 col-md-3 mb-4">
-                                <div class="courses__element courses__element--1">
-                                    <img class="courses__icon" src="{{ rec.logo.path }}" alt="courses__icon">
-                                    <h6 class="courses__name">{{ rec.name }}</h6>
+                    <div class="owl-preferences">
+                        <div class="owl-carousel owl-theme">
+                            {% for rec in courses %}
+                                <div class="item">
+                                    <div class="courses__element courses__element--1">
+                                        <img class="courses__icon" src="{{ rec.logo.path }}" alt="courses__icon">
+                                        <h6 class="courses__name u-margin-top-medium"><a href="{{ 'course-detail'|page({ slug:rec.slug  }) }}">{{ rec.name }}</a></h6>
+                                    </div>
                                 </div>
-                            </div>
-                        {% endfor %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>

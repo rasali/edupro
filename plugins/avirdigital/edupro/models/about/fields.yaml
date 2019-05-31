@@ -4,27 +4,6 @@ fields:
         size: ''
         span: full
         type: textarea
-    mobile:
-        label: 'avirdigital.edupro::lang.about.mobile'
-        span: auto
-        type: text
-    phone:
-        label: 'avirdigital.edupro::lang.about.phone'
-        span: auto
-        type: text
-    email:
-        label: 'avirdigital.edupro::lang.about.email'
-        span: auto
-        type: text
-    sec_email:
-        label: 'avirdigital.edupro::lang.about.sec_email'
-        span: auto
-        type: text
-    address:
-        label: 'avirdigital.edupro::lang.about.address'
-        span: full
-        size: ''
-        type: textarea
     content:
         label: 'avirdigital.edupro::lang.about.content'
         span: full

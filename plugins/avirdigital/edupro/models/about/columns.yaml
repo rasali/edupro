@@ -5,3 +5,7 @@ columns:
     email:
         label: 'avirdigital.edupro::lang.about.email'
         type: text
+    sort_ordeer:
+        label: Sort
+        type: number
+        sortable: true

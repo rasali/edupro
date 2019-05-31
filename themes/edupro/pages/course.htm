@@ -20,7 +20,7 @@ is_hidden = 0
                         {% for rec in courses %}
                             <div class="col-12 col-md-3 mb-4">
                                 <div class="courses__element courses__element--hover courses__element--1">
-                                    <img class="courses__icon" src="{{ rec.logo.path }}" alt="courses__icon">
+                                    <a href="{{ 'course-detail'|page({ slug:rec.slug  }) }}"><img class="courses__icon" src="{{ rec.logo.path }}" alt="courses__icon"></a>
                                     <h6 class="courses__name"><a href="{{ 'course-detail'|page({ slug:rec.slug  }) }}">{{ rec.name }}</a></h6>
                                 </div>
                             </div>

@@ -929,6 +929,10 @@ textarea {
 .owl-carousel {
   height: 100%; }
 
+.owl-preferences .owl-nav{
+    display: none;
+}
+
 .courses__elements .owl-dots {
   display: block !important;
   position: absolute;
@@ -1011,13 +1015,9 @@ textarea {
 .owl-2 .owl-item {
   padding-top: 9rem; }
 
-.owl-2 .owl-nav button span, .owl-preferences .owl-nav button span {
-  font-size: 3rem; }
-
-.owl-2 .owl-nav button:hover, .owl-preferences .owl-nav button:hover {
-  background: transparent !important;
-  color: #000 !important;
-  cursor: pointer; }
+.owl-2 .owl-nav{
+    display: none!important;
+}
 
 .preference {
   text-align: center; }
@@ -1214,8 +1214,8 @@ textarea {
       .contact__element:hover {
         background-color: #f6f6f6;
         color: #000; }
-        .contact__element:hover i {
-          color: #4370a8; } }
+        .contact__element:hover .contact__elem {
+          color: #4370a8; }}
     @media (max-width: 575px) {
       .contact__element {
         width: 100%;
@@ -1233,13 +1233,14 @@ textarea {
         .contact__element i {
           margin-bottom: 1.8rem;
           font-size: 3.5rem; } }
-    .contact__element span {
+    .contact__element span, .contact__element a {
+        color: #fff;
       font-size: 1.5rem;
       display: block;
       font-weight: 400;
       margin-bottom: 1.2rem; }
       @media (min-width: 767px) and (max-width: 1200px) {
-        .contact__element span {
+        .contact__element span, .contact__element a {
           margin-bottom: 0;
           font-size: 1.2rem; } }
 
@@ -1355,9 +1356,11 @@ textarea {
 .select2-container--default
 .select2-selection--single
 .select2-selection__arrow b {
-  top: 80%;
+  top: 100%;
   left: 30%; }
-
+.select2-selection__rendered{
+    line-height: 3.5rem!important;
+}
 .select2-container--focus:focus {
   outline: none; }
 
@@ -1734,3 +1737,4 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
+

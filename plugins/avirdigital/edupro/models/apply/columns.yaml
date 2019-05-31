@@ -5,3 +5,7 @@ columns:
     position:
         label: 'avirdigital.edupro::lang.student.position'
         type: text
+    sort_order:
+        label: Sort
+        type: number
+        sortable: true
