@@ -5,6 +5,8 @@
     </IfModule>
 
     RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     ##
     ## You may need to uncomment the following line for some hosting environments,

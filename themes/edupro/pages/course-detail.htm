@@ -5,7 +5,6 @@ is_hidden = 0
 
 [Course]
 
-[Home]
 ==
 <main>
     <div class="courses">
@@ -14,7 +13,7 @@ is_hidden = 0
                 <div class="course">
                     <div class="course__logo">
                         <div class="course__icon">
-                            <img src="{{ course.logo.path | resize(99, 91) }}" alt="course__svg" class="course__svg">
+                            <img src="{{ course.logo.path   }}" alt="course__svg " class="course__svg  img-fluid">
                         </div>
                         <h3 class="course__name">
                             <span class="course__name--main">{{ course.name }}</span>
@@ -62,6 +61,11 @@ is_hidden = 0
             </div>
         </div>
 
+
+
+
+
+
         <div class="courses__main u-padding-top-small">
             <div class="container">
                 <div class="courses__contents u-margin-top-medium">
@@ -78,7 +82,9 @@ is_hidden = 0
                                 <div class="item">
                                     <div class="courses__element courses__element--1">
                                         <img class="courses__icon" src="{{ rec.logo.path }}" alt="courses__icon">
-                                        <h6 class="courses__name u-margin-top-medium"><a href="{{ 'course-detail'|page({ slug:rec.slug  }) }}">{{ rec.name }}</a></h6>
+                                        <h6 class="courses__name u-margin-top-medium"><a
+                                                href="{{ 'course-detail'|page({ slug:rec.slug  }) }}">{{ rec.name }}</a>
+                                        </h6>
                                     </div>
                                 </div>
                             {% endfor %}

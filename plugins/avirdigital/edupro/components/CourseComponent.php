@@ -27,7 +27,7 @@ class CourseComponent extends ComponentBase
     {
 
         $this->prepareVars();
-        $this->page['course'] = $this->listCourse();
+        $a = $this->page['course'] = $this->listCourse();
 //        $this->page['other_courses'] = $this->otherCourse();
 
     }

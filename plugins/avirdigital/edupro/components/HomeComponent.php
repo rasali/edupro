@@ -29,9 +29,7 @@ class HomeComponent extends ComponentBase
         $this->page['partners'] = $this->listPartner();
         $this->page['careers'] = $this->listCareer();
         $this->page['students'] = $this->listStudent();
-//        $this->page['about'] = $this->listAbout();
         $this->page['social'] = $this->listSocial();
-//        dd($this->page['social']);
 
     }
 
@@ -68,13 +66,7 @@ class HomeComponent extends ComponentBase
 
     }
 
-//    protected function listAbout()
-//    {
-//        $model = new About();
-//
-//        return $model->where('is_active', 1)->get();
-//
-//    }
+
 
     protected function listSocial()
     {
