@@ -18,20 +18,23 @@ is_hidden = 0
         <div class="appeal__main">
             <div class="courses__elements u-margin-top-biggest u-padding-bottom-smaller">
                 <div class="container">
-                    <form data-request="onSendMessage" data-request-validate
+                    <form data-request="onSendMessage" data-request-success="toasterOptions()" data-request-validate
                           data-request-flash>
                         <div class="appeal__form">
                             <div class="row">
                                 <div class="col-12 col-md-3">
-                                    <input name="full_name" type="text" class="appeal__name-surname" placeholder="Adınız Soyadınız">
+                                    <input name="full_name" type="text" class="appeal__name-surname"
+                                           placeholder="Adınız Soyadınız">
                                     <span class="text-danger" data-validate-for="full_name"></span>
                                 </div>
                                 <div class="col-12 col-md-3">
-                                    <input name="email" type="email" class="appeal__email" placeholder="E-poçt adresiniz">
+                                    <input name="email" type="email" class="appeal__email"
+                                           placeholder="E-poçt adresiniz">
                                     <span class="text-danger" data-validate-for="email"></span>
                                 </div>
                                 <div class="col-12 col-md-3">
                                     <input name="phone" type="text" class="appeal__phone" placeholder="Əlaqə nömrəniz">
+                                    <span class="text-danger" data-validate-for="phone"></span>
                                 </div>
                                 <div class="d-none d-sm-block col-md-3">
                                     <button type="submit" class="appeal__btn">Göndər</button>
@@ -59,16 +62,58 @@ is_hidden = 0
         var uluru = {lat: 40.405177, lng: 49.838027};
         // The map, centered at Uluru
         var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 12, center: uluru});
+            document.getElementById('map'), {zoom: 18, center: uluru});
         // The marker, positioned at Uluru
         var marker = new google.maps.Marker({position: uluru, map: map});
     }
 </script>
+
+{% put styles %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+
+    <style>
+
+    </style>
+
+{% endput %}
+
+
+{% put scripts %}
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+
+    <script>
+
+        function toasterOptions() {
+
+            Command: toastr["success"]("message sent")
+
+            toastr.options = {
+                "positionClass": "toast-top-center",
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+        };
+
+
+    </script>
+
+{% endput %}
 <!--Load the API from the specified URL
 * The async attribute allows the browser to render the page while the API loads
 * The key parameter will contain your own API key (which is not needed for this tutorial)
 * The callback parameter executes the initMap() function
 -->
 <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKZNkRDYHRJySQRIpWJEsPnh3uthlwatU&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKZNkRDYHRJySQRIpWJEsPnh3uthlwatU&callback=initMap">
 </script>

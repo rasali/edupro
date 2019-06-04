@@ -16,7 +16,7 @@ is_hidden = 0
         <div class="appeal__main u-margin-top-biggest">
             <div class="container">
                 <form data-request="onApply" data-request-validate
-                      data-request-flash>
+                      data-request-flash data-request-redirect="{{ 'apply'|page }}">
                     <div class="appeal__form">
                         <div class="row">
                             <div class="col-12 col-md-3">
@@ -29,6 +29,7 @@ is_hidden = 0
                             </div>
                             <div class="col-12 col-md-3">
                                 <input name="phone" type="text" class="appeal__phone" placeholder="Əlaqə nömrəniz">
+                                <span class="text-danger" data-validate-for="phone"></span>
                             </div>
                             <div class="col-12 col-md-3">
                                 <input name="email" type="email" class="appeal__email" placeholder="E-poçt adresiniz" required>

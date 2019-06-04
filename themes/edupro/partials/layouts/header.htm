@@ -9,15 +9,15 @@
             <div class="header__right">
                 <nav class="header__nav">
                     <ul class="header__list">
-                        <li class="header__list-item"><a class="header__list_text active" href="{{ 'home'|page }}">Ana səhifə</a>
+                        <li {% if this.page.id == 'home' %} class="header__list-item active"{% endif %}><a class="header__list_text active" href="{{ 'home'|page }}">Ana SƏHİFƏ</a>
                         </li>
-                        <li class="header__list-item"><a class="header__list_text" href="{{ 'about-us'|page }}">Haqqımızda</a></li>
-                        <li class="header__list-item"><a class="header__list_text" href="{{ 'course'|page }}">Kurslar</a></li>
-                        <li class="header__list-item"><a class="header__list_text" href="{{ 'contact'|page }}">Bizimlə Əlaqə</a></li>
+                        <li {% if this.page.id == 'about-us' %} class="header__list-item active"{% endif %}><a class="header__list_text" href="{{ 'about-us'|page }}">Haqqımızda</a></li>
+                        <li {% if this.page.id == 'course' %} class="header__list-item active"{% endif %}><a class="header__list_text" href="{{ 'course'|page }}">Kurslar</a></li>
+                        <li {% if this.page.id == 'contact' %} class="header__list-item active"{% endif %}><a class="header__list_text" href="{{ 'contact'|page }}">BİZİMLƏ Əlaqə</a></li>
                     </ul>
                 </nav>
 
-                <a class="header__register btn btn--animated" href="{{ 'apply'|page }}">Müraciət Et</a>
+                <a class="header__register btn btn--animated" href="{{ 'apply'|page }}">MÜRACİƏT Et</a>
             </div>
 
 

@@ -13,9 +13,7 @@ class Partner extends Model
 
     use \October\Rain\Database\Traits\Sortable;
 
-    use \October\Rain\Database\Traits\Sluggable;
 
-    protected $slugs = ['slug' => 'name'];
 
     protected $dates = ['deleted_at'];
 

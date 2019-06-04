@@ -27,8 +27,16 @@ class CourseComponent extends ComponentBase
     {
 
         $this->prepareVars();
-        $a = $this->page['course'] = $this->listCourse();
-//        $this->page['other_courses'] = $this->otherCourse();
+        $this->page['course'] = $this->listCourse();
+        $this->page['courses'] = $this->listCourses();
+    }
+
+    protected function listCourses()
+    {
+        $model = new Course();
+
+        return $model->where('is_active', 1)->get();
+
 
     }
 

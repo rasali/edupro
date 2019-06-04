@@ -26,6 +26,7 @@ class HomeComponent extends ComponentBase
     public function onRun()
     {
         $this->page['courses'] = $this->listCourse();
+//        $this->page['coursesfooter'] = $this->listCourseFooter();
         $this->page['partners'] = $this->listPartner();
         $this->page['careers'] = $this->listCareer();
         $this->page['students'] = $this->listStudent();
@@ -41,6 +42,15 @@ class HomeComponent extends ComponentBase
 
 
     }
+
+//    protected function listCourseFooter()
+//    {
+//        $model = new Course();
+//
+//        return $model->where('is_active', 1)->orderBy('sort_order','DESC')->take(4)->get();
+//
+//
+//    }
 
     protected function listPartner()
     {

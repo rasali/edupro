@@ -30,6 +30,19 @@ tabs:
             default: Welcome to Edu Pro!
             span: auto
 
+        about_description:
+            label: About description
+            tab: General informations
+            type: textarea
+            comment: Will appear in footer
+            span: auto
+
+        course_description:
+            label: Hazırki kurslarımız
+            tab: General informations
+            type: textarea
+            span: auto
+
         copyright_text:
             label: Copyright
             comment: The copyright text as it should appear on the footer bottom side

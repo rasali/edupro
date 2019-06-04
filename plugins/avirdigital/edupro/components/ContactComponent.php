@@ -36,6 +36,7 @@ class ContactComponent extends ComponentBase
             'full_name' => 'required',
             'email' => 'required|email',
             'content' => 'required',
+            'phone' => 'required',
         ];
 
         $validation = Validator::make($validateData, $rules);
@@ -49,11 +50,10 @@ class ContactComponent extends ComponentBase
 
             Mail::send('avirdigital.edupro::mail.message', $validateData, function ($message) {
 
-                $message->to('rasul.aliyev94@gmail.com', 'Admin Person');
+                $message->to('admin@domain.tld', 'Admin Person');
                 $message->subject('You have a new message');
 
             });
-
 
         }
 

@@ -44,6 +44,7 @@ class ApplyComponent extends ComponentBase
         $rules = [
             'name' => 'required',
             'surname' => 'required',
+            'phone' => 'required',
             'email' => 'required|email',
             'position' => 'required',
         ];
@@ -56,7 +57,7 @@ class ApplyComponent extends ComponentBase
         } else {
             $apply = Apply::create($validateData);
 
-            Mail::send('avirdigital.edupro::mail.message', $validateData, function ($message) {
+            Mail::send('avirdigital.edupro::mail.apply_message', $validateData, function ($message) {
 
                 $message->to('rasul.aliyev94@gmail.com', 'Admin Person');
                 $message->subject('You have a new message');

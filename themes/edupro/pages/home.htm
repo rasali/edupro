@@ -14,10 +14,10 @@ is_hidden = 0
                 <img src="{{ 'assets/img/search__image.png'|theme }}" alt="search image">
             </div>
             <h1 class="search__header">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                Edu Pro - müxtəlİf sahələr üzrə təcrübəlİ mütəxəssİslər hazırlayan tədrİs mərkəzİ
             </h1>
             <p class="search__paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                GƏLƏCƏYİNİZİ BİZİM kurslarımızda peşəkarlara əmanət edİn
             </p>
             <div class="search__input">
                 <form action="{{ 'search' | page }}" method="get">
@@ -35,20 +35,14 @@ is_hidden = 0
             <div class="row">
                 <div class="col-12 col-md-3 p-0">
                     <div class="courses__info u-padding-top-medium u-padding-left-medium u-padding-right-medium u-padding-bottom-small">
-                        <h2 class="courses__info_header">Hazırkı Kurslarımız</h2>
+                        <h2 class="courses__info_header">Hazırkİ Kurslarımız</h2>
                         <p class="courses__info_paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.
+                            {{ this.theme.course_description }}
                         </p>
                     </div>
                 </div>
                 <div class="col-12 col-md-9 p-0">
-                    <div class="courses__elements u-padding-top-big u-padding-left-small u-padding-right-small u-padding-bottom-small">
+                    <div class="courses__elements courses__owl-dots  u-padding-top-big u-padding-left-small u-padding-right-small u-padding-bottom-small">
                         <div class="owl-carousel owl-theme" id="coursecar">
                             {% for rec in courses %}
                                 <div class="item">

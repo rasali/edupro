@@ -711,6 +711,10 @@ textarea {
       max-height: 10rem;
       width: 100%; } }
 
+@media (max-width: 767px) {
+    .courses__icon {
+        width: 100%!important; } }
+
 .courses__elements {
   background-color: #f6f6f6;
   height: 100%; }
@@ -933,7 +937,11 @@ textarea {
     display: none;
 }
 
-.courses__elements .owl-dots {
+.courses__elements .owl-dots{
+    display: none!important;
+}
+
+.courses__owl-dots .owl-dots {
   display: block !important;
   position: absolute;
   bottom: -3rem;
@@ -941,21 +949,21 @@ textarea {
   background-color: #bfbfbf;
   padding: .5rem 2.8rem .3rem; }
   @media (max-width: 767px) {
-    .courses__elements .owl-dots {
+      .courses__owl-dots .owl-dots {
       bottom: -4rem;
       padding: .6rem 1.6rem .6rem;
       display: none !important; } }
   @media (min-width: 900px) and (max-width: 1200px) {
-    .courses__elements .owl-dots {
+    .courses__owl-dots .owl-dots {
       bottom: -1.2rem; } }
   @media (min-width: 767px) and (max-width: 1000px) {
-    .courses__elements .owl-dots {
+      .courses__owl-dots .owl-dots {
       bottom: -1.2rem; } }
   @media (min-width: 800px) and (max-width: 900px) {
-    .courses__elements .owl-dots {
+      .courses__owl-dots .owl-dots {
       bottom: -5rem; } }
   @media (min-width: 900px) and (max-width: 1000px) {
-    .courses__elements .owl-dots {
+    .courses__owl-dots .owl-dots {
       bottom: -1.2rem; } }
 
 @media (max-width: 767px) {
@@ -970,9 +978,9 @@ textarea {
         color: #000 !important;
         background: transparent !important; }
   .courses__elements .owl-prev {
-    left: -2.5rem !important; }
+    left: -2rem !important; }
   .courses__elements .owl-next {
-    right: -2.5rem !important; } }
+    right: -2rem !important; } }
 
 .item {
   width: 100%; }
@@ -1408,6 +1416,7 @@ textarea {
     transition: all .4s; } }
 
 .footer {
+    margin-bottom: -2rem;
   background-color: #333333; }
   @media (max-width: 991px) {
     .footer {
@@ -1529,6 +1538,9 @@ textarea {
        -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+.header__list-item.active{
+
+}
     @media (max-width: 991px) {
       .header__list {
         display: block;
