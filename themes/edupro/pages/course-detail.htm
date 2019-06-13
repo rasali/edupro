@@ -17,13 +17,13 @@ is_hidden = 0
                         </div>
                         <h3 class="course__name">
                             <span class="course__name--main">{{ course.name }}</span>
-                            <span class="course__name--sub">#{{ course.slug }}</span>
+                            {#<span class="course__name--sub">#{{ course.slug }}</span>#}
                         </h3>
                     </div>
                     <div class="course__times">
                         <h6 class="course__time course__time--1">
                             <span class="course__time--sub">
-                                Ümumi
+                                Ümumİ
                             </span>
                             <span class="course__time--main">
                                 {{ course.hours }}
@@ -31,7 +31,7 @@ is_hidden = 0
                         </h6>
                         <h6 class="course__time course__time--2">
                             <span class="course__time--sub">
-                                Həftə içi gündüz
+                                Həftə İçİ gündüz
                             </span>
                             <span class="course__time--main">
                                 {{ course.afternoon }}
@@ -39,7 +39,7 @@ is_hidden = 0
                         </h6>
                         <h6 class="course__time course__time--3">
                             <span class="course__time--sub">
-                                Həftə içi axşam
+                                Həftə İçİ axşam
                             </span>
                             <span class="course__time--main">
                                 {{ course.evening }}
@@ -55,7 +55,7 @@ is_hidden = 0
                         </h6>
                     </div>
                     <div class="course__catalog">
-                        <a class="course__catalog--link" href="{{ course.file.path }}">PDF Kataloq</a>
+                        <a class="course__catalog--link" href="{{ 'soon'|page }}">PDF Kataloq</a>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ is_hidden = 0
 
             <div class="courses__elements u-padding-top-less u-padding-bottom-small">
                 <div class="container">
-                    <h3 class="appeal__header">Tədris Proqramı</h3>
+                    <h3 class="appeal__header">Tədrİs Proqramı</h3>
                     <div class="owl-preferences">
                         <div class="owl-carousel owl-theme">
                             {% for rec in courses %}

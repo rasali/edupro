@@ -48,7 +48,7 @@ class ContactComponent extends ComponentBase
 
             $contact = Contact::create($validateData);
 
-            Mail::send('avirdigital.edupro::mail.message', $validateData, function ($message) {
+           $a = Mail::send('avirdigital.edupro::mail.message', $validateData, function ($message) {
 
                 $message->to('admin@domain.tld', 'Admin Person');
                 $message->subject('You have a new message');

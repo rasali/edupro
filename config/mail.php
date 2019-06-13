@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => 'smtp.yandex.ru',
+    'host' => 'smtp.mail.ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'test@edupro.az', 'name' => 'Edu Pro'],
+    'from' => ['address' => 'info@edupro.az', 'name' => 'Edu Pro'],
 
     /*
     |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ return [
     |
     */
 
-    'encryption' => 'ssl',
+    'encryption' => 'tls',
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'username' => 'test@edupro.az',
+    'username' => 'contact@edupro.az',
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ return [
     |
     */
 
-    'password' => 'testedupro',
+    'password' => 'P8cwShYV',
 
     /*
     |--------------------------------------------------------------------------
@@ -110,7 +110,7 @@ return [
     'sendmail' => '/usr/sbin/sendmail -bs',
 
     'to' => [
-        'address' => 'rasul.aliyev94@gmail.com',
+        'address' => 'contact@edupro.az',
         'name' => 'Catch all email'
     ],
 

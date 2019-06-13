@@ -921,6 +921,9 @@ textarea {
       font-family: DINRoundPro-Black, Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
       color: #fff; }
+.course__catalog--link:hover{
+    color: white;
+}
       @media (max-width: 991px) {
         .course__catalog--link {
           padding: 1rem 3rem; } }
